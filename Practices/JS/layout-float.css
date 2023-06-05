@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+}
+
+div {
+    /* text-align: center; */
+}
+
+hr {
+    margin-top: 50px;
+    border: 0.1px solid #ddd;
+}
+
+/* 1. */
+div.float {
+    padding: 20px 100px;
+
+}
+
+.float.left {
+
+    background: plum;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.float.right {
+
+    background: lightblue;
+    float: right;
+
+}
+
+/* 2. */
+.wrap {
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.wrap.one p {
+    /* display: inline-block; */
+    /* width: 600px; */
+
+}
+
+img.avatar {
+    border: 1px solid black;
+    width: 200px;
+    float: right;
+}
+
+/* 3.  */
+nav {
+    float: left;
+    width: 20%;
+}
+
+.menu {
+    background: lightseagreen;
+    padding: 10px 20px;
+
+    margin-bottom: 5px;
+    margin-left: 20px;
+
+}
+
+main {
+    width: 50%;
+    float: left;
+    margin-left: 10px;
+}
+
+aside {
+    background: lightseagreen;
+    width: 20%;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* 4. */
+.wrap.three {
+    background: tomato;
+    margin: 0;
+}
+
+.three ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.three ul li {
+    color: white;
+    float: left;
+
+    padding: 10px 20px;
+
+
+    /* vertical-align: middle; */
+}
+
+.three ul li:hover {
+    background: orangered;
+}
+
+.three .search {
+    float: right;
+    /* padding: 5px; */
+}
+
+.three .search input {
+    /* */
+    margin: 5px;
+    padding: 5px;
+}
+
+.three .search div {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 5px 10px 5px 10px;
+    background: white;
+    width: 50px;
+    border-radius: 20px;
+    text-align: center;
+
+}

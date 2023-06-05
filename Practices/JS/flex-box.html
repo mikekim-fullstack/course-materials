@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="view-port" content="width=device-width, intial-scale=1.0" />
+    <title>Flex Box</title>
+    <link rel="icon" type="image/icon" href="../../html.png" />
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .box {
+            width: 100px;
+            border: 10px solid yellow;
+            height: 100px;
+
+            padding: 10px;
+        }
+
+        /* .box1 {
+            height: 50px;
+        }
+
+        .box4 {
+            height: 150px;
+        }
+
+        .box5 {
+            height: 80px;
+        }
+
+        .box6 {
+            height: 120px;
+        } */
+        .box2 {}
+
+        .box3 {
+            padding-top: 50px;
+            flex-grow: 1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* gap: 10px; */
+            align-items: start;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Content 1 </div>
+        <div class="box box2">
+            <h3>Content 2 </h3>
+        </div>
+        <div class="box box3">Content 3</div>
+        <div class="box box4">Content 4</div>
+        <div class="box box5">Content 5</div>
+        <!-- <div class="box box6">Content 6</div>
+        <div class="box box7">Content 7</div>
+        <div class="box box8">Content 8</div> -->
+    </div>
+</body>
+
+</html>

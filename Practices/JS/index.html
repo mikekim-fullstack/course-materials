@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div> Hello</div>
+    <h1>h1 element</h1>
+    <button>click me</button>
+    <button>click me</button>
+    <div class='dis-none'>
+        display:none
+    </div>
+    <table style="width:100%">
+
+        <colgroup>
+            <col />
+            <col span="2" style="background-color:red; color:white; font-size:2rem;" />
+            <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+            <th rowspan='3' style='color:blue;'>Lists</th>
+
+            <th colspan='2'>Name</th>
+            <th> Age</th>
+        </tr>
+
+        <tr>
+
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+
+        <tr>
+
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
+
+
+    <h1>After display none</h1>
+
+    <!-- Drop down -->
+    <select id="ddlViewBy">
+        <option name='dd' value="1">test1</option>
+        <option name='dd' value="2" selected="true">test2</option>
+        <option name='dd' value="3">test3</option>
+    </select>
+    <div id='dd-result'>::</div>
+    <!-- Vertical Centered -->
+
+    <h1>Vertically Centered</h1>
+    <section>
+        <div class="container-flex">
+            <div class="flex-centered-element">
+                <p>I'm vertically centered by flex</p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="container-transform">
+            <div class="transform-centered-element">
+                <p>I'm a Camper, and I'm vertically by position</p>
+            </div>
+        </div>
+    </section>
+    <p style="text-align:center;">END</p>
+
+    <!-- Crear fix -->
+    <h2>Clearfix</h2>
+    <section id="default-example" class="default-example">
+        <div class="example-container">
+            <div class="floated-left">Left</div>
+            <div class="floated-right">Right</div>
+            <div id="example-element" class="transition-all">As much mud in the streets as if the
+                waters had but newly retired from the face of the earth, and it would not be wonderful to meet a
+                Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</div>
+        </div>
+    </section>
+    <!-- float property -->
+    <h2>float property</h2>
+    <div class="container-float">
+        <div class="float-col">Col1</div>
+        <div class="float-col">Col2</div>
+        <div class="float-col">Col3</div>
+        <div class="float-col">Col4</div>
+        <div class="float-col">Col5</div>
+        <div class="float-col">Col6</div>
+        <div class="float-col">Col7</div>
+        <div class="float-col">Col8</div>
+        <div class="float-col">Col8</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eius, unde inventore
+            similique nemo aliquid voluptate odio esse odit. Odio modi ducimus, ipsa repellat aliquam sapiente sequi qui
+            hic sed.</p>
+    </div>
+    <!-- End -->
+    <!-- Layout -->
+    <h1>Layout</h1>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

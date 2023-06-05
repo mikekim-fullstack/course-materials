@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/react@16.7.0/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js'></script>
+    <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+    <title>Document</title>
+</head>
+
+<body id='root'>
+    <!-- 
+        --- show this as a component
+        Hello LaLaSol    // header
+        My tasks:        //Subheader
+                         // List
+            .Learn React          // List Items
+            .Interview my partner // List items
+            .Solve algorithm      // List items
+            .Prepare an exam      // List items
+
+     -->
+
+
+</body>
+<script type='text/babel'>
+    const items = ['Learn React', 'Interview my partner', 'Solve algorithm', 'Prepare an exam ']
+    const Header = (props) => <h1>{props.title}</h1>
+    const SubHeader = (props) => <h2>{props.subTitle}</h2>
+    const TaskLists = (props) => {
+        return <>
+            <ul>
+                {
+                    props.items.map((item) => {
+                        return <li>{item}</li>
+                    })
+                }
+            </ul>
+        </>
+    }
+    const List = (props) => <ul>{props.children}</ul>
+    const ListItem = (props) => <li>{props.children}</li>
+    const App = () => {
+        return <>
+            <Header title='Hello LaLaSol!' />
+            <SubHeader subTitle='My tasks' />
+            <TaskLists items={items} />
+
+            <SubHeader subTitle='My Friends' />
+            <List>
+                <ListItem>Mashal</ListItem>
+                <ListItem>Aida</ListItem>
+                <ListItem>John</ListItem>
+            </List>
+        </>
+    }
+    ReactDOM.render(<App />, document.querySelector('#root'))
+</script>
+
+</html>

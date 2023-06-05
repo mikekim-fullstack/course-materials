@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/react@16.7.0/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js'></script>
+    <!-- 
+        Babel is the javascript compiler which convers ES6 to previous version for the different web browser compatibility.
+        In the script tag the "type='text/bable'" is required to apply the babel compiler...
+     -->
+    <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+    <title>Document</title>
+</head>
+
+<body id="root">
+    <div id="js"></div>
+    <div id="react"></div>
+
+</body>
+<script type="text/babel">
+    function renderJS() {
+        const ele = `
+        <h1>Hello, renderJS!</h1>
+        <h2>${new Date().toLocaleTimeString()}</h2>
+        `
+        document.querySelector('#js').innerHTML = ele
+
+    }
+    function renderReact() {
+        const ele = <div>
+            <h1>Hello, renderReact!</h1>
+            <h2>{new Date().toLocaleTimeString()}</h2>
+        </div>
+        ReactDOM.render(ele, document.querySelector('#react'))
+    }
+    setInterval(renderJS, 1000)
+    setInterval(renderReact, 1000)
+</script>
+
+</html>

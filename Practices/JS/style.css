@@ -1,0 +1,78 @@
+.container-transform {
+    position: relative;
+    border: 1px solid pink;
+}
+
+.transform-centered-element {
+    border: 1px solid blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-flex {
+    position: static;
+    border: 1px dashed pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-centered-element {
+    border: 2px solid blue;
+
+
+}
+
+/* Clear fix */
+.example-container {
+    border: 1px solid #c5c5c5;
+    padding: .75em;
+    text-align: left;
+    line-height: normal;
+    width: 30%;
+    overflow: hidden;
+}
+
+.floated-left {
+    border: solid 10px #ffc129;
+    background-color: rgba(255, 244, 219, .6);
+    padding: 1em;
+    float: left;
+}
+
+.floated-right {
+    border: solid 10px #ffc129;
+    background-color: rgba(255, 244, 219, .6);
+    padding: 1em;
+    float: right;
+    height: 150px;
+}
+
+.transition-all {
+    clear: both;
+
+    transition: all .3s ease-in;
+}
+
+/* float property */
+.container-float {
+    width: 50%;
+    /* horizontal center */
+    margin: 0 auto;
+    border: 1px solid pink;
+    text-align: center;
+
+    overflow: auto;
+    height: 150px;
+}
+
+.float-col {
+    border: 10px solid greenyellow;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ccc;
+    float: inline-start;
+    width: 100px;
+}

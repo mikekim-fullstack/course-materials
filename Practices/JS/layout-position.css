@@ -1,0 +1,26 @@
+.container {
+    width: 400px;
+    margin: auto;
+    position: relative;
+}
+
+img {
+    width: 400px;
+    border: 10px solid lightgrey;
+    border-radius: 5px;
+}
+
+.info {
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+    left: 0px;
+    background: black;
+    color: white;
+    padding: 5px 50px 5px 5px;
+}
+
+p {
+    width: 200px;
+    margin: 0 auto;
+}

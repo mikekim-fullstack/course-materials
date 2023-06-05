@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta chatset="UTF-8" />
+    <meta name="view-port" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <title>Form</title>
+    <style>
+        :root {
+            --background-color: #f0eeee;
+        }
+
+        body {
+            font-family: 'Montserat', sans-serif;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            padding: 10px 20px;
+            background: tomato;
+            color: white;
+            font-size: 1.5em;
+            width: 400px;
+            text-align: center;
+            margin: 20px auto;
+            /* display: inline-block; */
+        }
+
+        .member {
+            margin: 10px auto;
+            padding: 20px;
+            background: var(--background-color);
+        }
+
+        .row {
+            width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        [type='radio'] {
+
+            /* position: absolute;
+            opacity: 0; */
+            display: none;
+            /* visibility: hidden; */
+
+        }
+
+        /* change cursor to pointer on image */
+        [type='radio']+img {
+            cursor: pointer;
+        }
+
+        [type='radio']:checked+img {
+            outline: 5px solid pink;
+        }
+
+        .radio-group {
+            /* border: 1px solid; */
+            height: 90px;
+            width: 330px;
+            margin: auto;
+            /* padding-top: 10px; */
+        }
+
+        .radio {
+            float: left;
+            margin: 0 20px;
+        }
+
+        .radio img {
+            width: 50px;
+            border-radius: 50%;
+            /* margin: 2px; */
+            /* border: 5px solid pink; */
+        }
+
+        .radio div {
+            margin-top: 10px;
+        }
+
+
+
+
+        [type='text'],
+        [type='email'],
+        [type='date'],
+        [type='time'] {
+            padding: 3px;
+            font-size: 1.2em;
+        }
+
+        [type='checkbox'] {
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid currentColor;
+            border-radius: 0.15em;
+            transform: translateY(0.075em);
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 1.2em;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        fieldset {
+            /* height: 300px; */
+            text-align: center;
+            position: relative;
+        }
+
+        legend {
+            position: absolute;
+            background: var(--background-color);
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 10px;
+
+        }
+
+        /* put text below redio button(in this case it is an image) */
+    </style>
+</head>
+
+<body>
+    <div class="title">Fitness Reservation Page!</div>
+    <form class="member">
+        <fieldset>
+            <legend>Member Demographics</legend>
+            <div class="row">
+                Name <input required name="name" type="text" placeholder="Name *" />
+            </div>
+            <br />
+            <div class="row">
+                <h3>Are you memeber?</h3>
+            </div>
+            <div class="row radio-group">
+
+                <div class="radio">
+
+                    <label>
+                        <input type="radio" name="nature" value="nature1" checked>
+                        <img src="https://picsum.photos/id/1015/50/50">
+                    </label>
+                    <div>Member</div>
+                </div>
+
+                <div class="radio">
+
+                    <label>
+                        <input type="radio" name="nature" value="nature2">
+                        <img src="https://picsum.photos/id/1016/50/50">
+                    </label>
+                    <div>Non-member</div>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="nature" value="nature3">
+                        <img src="https://picsum.photos/id/100/50/50">
+                    </label>
+                    <div>VIP</div>
+                </div>
+            </div>
+            <!-- end of radio-group -->
+            <div class="row">
+                Email <input required name='email' type="email" placeholder="Email *" />
+            </div>
+        </fieldset>
+        <div class="row">
+            <label>Facility</label>
+            <select name="facility">
+                <option value="badminton">Badminton</option>
+                <option selected value="soccer">Soccer</option>
+                <option value="pool">Pool</option>
+                <option value="gym">Gym</option>
+            </select>
+        </div>
+        <div class="row">
+            <h3>Select Reservation date and time</h3>
+        </div>
+        <div class="row">
+            <input name='date' type="date" />
+            <input name='time' type="time" />
+        </div>
+        <div class="row">
+            <input name="checkbox" type="checkbox" /> <label>I agree to the club's reservation policy</label>
+        </div>
+        <div class="row">
+            <button type="submit">Submit</button>
+        </div>
+
+
+    </form>
+
+
+</body>
+
+</html>

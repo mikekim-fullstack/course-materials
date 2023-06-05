@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/react@16.7.0/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js'></script>
+    <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+    <title>Document</title>
+</head>
+<style>
+    .name {
+        color: blue;
+    }
+</style>
+
+<body id='root'>
+    <!--         <h1>Hello World.</h1> -->
+</body>
+<script type='text/babel'>
+    const root = document.querySelector('#root')
+
+    // Example 1.
+    // ... function Component ...
+    function Welcome(props) {
+        console.log(props)
+        return <>
+            <h1>Hello, {props.name}</h1>
+            {props.children}
+        </>
+    }
+    // ReactDOM.render(Welcome(), root) // Error: props is undefined
+    // ReactDOM.render(Welcome({}), root) // empty string: Hello, (props.name is undefined but it didn't show)
+    // ReactDOM.render(<Welcome id={1} name='Dina'><h1>Inside</h1></Welcome>, root) // empty string: Hello, (props.name is undefined but it didn't show)
+
+
+    // ... Class Component ...
+    class WelcomeClass extends React.Component {
+        // Initialize for constructor
+        constructor(props) {
+            // debugger
+            // console.log('this: ', this)// this is window object
+            super()
+        }
+
+        render() {
+            console.log('this: ', this)
+            return <>
+                <h1>hello, {this.props.name}</h1>
+                {this.props.children}
+            </>
+        }
+    }
+    // ReactDOM.render(<WelcomeClass id={1} name='Dina'><h1>Inside Children</h1></WelcomeClass>, root) // empty string: Hello, (props.name is undefined but it didn't show)
+
+    // Example 2.
+    const GetName = props => <h1 className='name'>Hello, {props.name}.</h1>
+    // 
+    const App = () => {
+        return <>
+            <GetName name='Ida' />
+            <GetName name='Zakry' />
+            <GetName name='Elmira' />
+            <GetName name='Mike' />
+        </>
+    }
+    // ReactDOM.render(<App />, root) // empty string: Hello, (props.name is undefined but it didn't show)
+
+    // Convert Example 2 to class components
+    class GetNameClass extends React.Component {
+        render() {
+            return <h1 className='name'>Hello, {this.props.name}</h1>
+        }
+    }
+
+    class AppClass extends React.Component {
+        render() {
+            return <>
+                <GetNameClass name='Ida' />
+                <GetNameClass name='Zakry' />
+                <GetNameClass name='Elmira' />
+                <GetNameClass name='Mike' />
+                <GetNameClass name={this.props.name} />
+            </>
+        }
+    }
+
+    ReactDOM.render(<AppClass name='last: Judy' />, root)
+
+
+
+
+</script>
+
+</html>

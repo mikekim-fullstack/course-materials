@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/react@16.7.0/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js'></script>
+    <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+    <title>Document</title>
+</head>
+
+<body id="root">
+
+</body>
+<script type="text/babel">
+    //... Build a student component and pass each props indiviaually
+    const student = {
+        name: 'Nurseit',
+        info: 'Lives in Seattle, WA',
+        imgPath: 'https://lalasol-bootcamp.web.app/images/default.jpg',
+    }
+    const Student = (props) => <>
+        <h1>Name: {props.name}</h1>
+        <h3>Info: {props.info}</h3>
+        <img src={props.imgPath} alt='avatar' />
+    </>
+    ReactDOM.render(<Student name={student.name} info={student.info} imgPath={student.imgPath} />, document.querySelector('#root'))
+</script>
+
+</html>
